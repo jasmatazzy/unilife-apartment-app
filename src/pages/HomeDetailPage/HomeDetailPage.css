@@ -1,0 +1,9 @@
+.pics-and-basics-container{
+    display: flex;
+    justify-content: center;
+}
+
+.description-and-bedroom-pricing-container{
+    display: flex;
+    justify-content: center;
+}
