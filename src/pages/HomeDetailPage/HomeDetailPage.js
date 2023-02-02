@@ -10,7 +10,7 @@ const HomeDetailPage = () => {
       </div>
       <div className='description-and-bedroom-pricing-container'>
         <div className='description'>
-          <h2>description</h2>
+          <h2>Description</h2>
           <p>"I contain the apartment description"</p>
         </div>
         <div className='basics-container'>
