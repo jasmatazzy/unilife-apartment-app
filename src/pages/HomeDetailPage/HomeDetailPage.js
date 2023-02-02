@@ -3,7 +3,9 @@ import './HomeDetailPage.css'
 
 const HomeDetailPage = () => {
   return (
-    <div>Home Detail Page</div>
+    <div>
+      
+    </div>
   )
 }
 
