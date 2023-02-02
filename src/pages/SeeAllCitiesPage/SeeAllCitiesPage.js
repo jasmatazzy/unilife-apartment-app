@@ -1,9 +1,14 @@
 import React from 'react'
 import './SeeAllCitiesPage.css'
+import Banner from '../../components/Banner/Banner'
 
 const SeeAllCitiesPage = () => {
   return (
-    <div>See All Cities Page</div>
+    <div>
+      <Banner />
+      <p>Search by City</p>
+      <div>city buttons area</div>
+    </div>
   )
 }
 
