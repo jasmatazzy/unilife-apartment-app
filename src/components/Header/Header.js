@@ -1,14 +1,14 @@
 import React from 'react'
 import { BsHeart } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
-// import home from '../../assets/icon-home.png'
+import home from '../../assets/icon-home.png'
 import './Header.css'
 
 const Header = () => {
   return (
     <div className='header'>
       <div className='home-button'>
-        🏠
+        <img src={home} alt='home'/>
         Unilife
       </div>
       <div className='right-side'>
