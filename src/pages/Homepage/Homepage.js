@@ -7,7 +7,7 @@ import HomepageCompareSection from '../../components/HomepageCompareSection/Home
 
 const Homepage = () => {
   return (
-    <div>
+    <div className='homepage-container'>
       <Banner />
       <SearchBox />
       <div>City Cards go here <button>See all cities</button></div>

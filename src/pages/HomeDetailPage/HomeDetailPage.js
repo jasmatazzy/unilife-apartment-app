@@ -3,7 +3,7 @@ import './HomeDetailPage.css'
 
 const HomeDetailPage = () => {
   return (
-    <div>
+    <div className='home-detail-page-container'>
       <div className='pics-and-basics-container'>
         <div className='pics-container'>"I contain pics"</div>
         <div className='basics-container'>" I contain address and logistics"</div>

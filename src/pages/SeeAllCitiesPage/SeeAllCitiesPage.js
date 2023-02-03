@@ -4,7 +4,7 @@ import Banner from '../../components/Banner/Banner'
 
 const SeeAllCitiesPage = () => {
   return (
-    <div>
+    <div className='see-all-cities-page-container'>
       <Banner />
       <p>Search by City</p>
       <div>city buttons area</div>

@@ -3,7 +3,7 @@ import './CityDetailsPage.css'
 
 const CityDetailsPage = () => {
   return (
-    <div>City Details Page</div>
+    <div className='city-details-page-container'>City Details Page</div>
   )
 }
 
