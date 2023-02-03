@@ -1,9 +1,13 @@
 import React from 'react'
 import './HomepageCompareSection.css'
 
-const HomepageCompareSection = () => {
+const HomepageCompareSection = ({image, callToAction, description}) => {
   return (
-    <div>"     Homepage Compare Section      "</div>
+    <div id='homepage-compare-section-container'>
+      <img src={image} alt='icon'/>
+      <h3>{callToAction}</h3>
+      <p>{description}</p>
+    </div>
   )
 }
 

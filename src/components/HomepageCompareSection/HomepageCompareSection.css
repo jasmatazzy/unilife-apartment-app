@@ -1,0 +1,10 @@
+#homepage-compare-section-container{
+    width: 25%;
+}
+
+#homepage-compare-section-container img{
+    height: 80px;
+}
+#homepage-compare-section-container p{
+    margin-top: 40px;
+}
