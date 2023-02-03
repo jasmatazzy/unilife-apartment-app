@@ -1,6 +1,5 @@
 import React from 'react'
 import './Footer.css'
-import { BsFacebook } from "react-icons/bs";
 import {AiFillFacebook, AiFillTwitterCircle, AiFillInstagram } from "react-icons/ai";
 
 const Footer = () => {
