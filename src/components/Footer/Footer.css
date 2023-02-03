@@ -1,0 +1,22 @@
+.blue-div{
+    height: 375px;
+    background-color: #00A2E1;
+}
+.black-div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+    background-color: black;
+    color: white;
+}
+.black-div div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.black-div p{
+    margin-right: 20px;
+    margin-left: 10px;
+}
