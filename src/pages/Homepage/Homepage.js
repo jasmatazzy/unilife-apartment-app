@@ -6,6 +6,9 @@ import HomepageCompareSection from '../../components/HomepageCompareSection/Home
 import searchIcon from '../../assets/icon-search.png'
 import compareIcon from '../../assets/icon-compare.png'
 import billsIcon from '../../assets/icon-bills.png'
+import imageofMan from '../../assets/image-manOnPhone.png'
+import { BsHeart } from "react-icons/bs";
+import { MdRealEstateAgent } from "react-icons/md";
 
 
 const Homepage = () => {
@@ -34,7 +37,22 @@ const Homepage = () => {
           />
         </div>
       </div>
-      <div>Static homepage data section</div>
+      <div className='static-homepage-data'>
+        <div className='text-and-icons-div'>
+          <div className='icons-div'>
+            <span><MdRealEstateAgent size={70}/></span>
+            <span><BsHeart size={70}/></span>
+          </div>
+          <div className='text-div'>
+            <h3>Best selection</h3>
+            <p>Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
+            <h3>Your favorite</h3>
+            <p>Shortlist your favourite properties and send enquiries in one click.</p>
+            <button>search and compare</button>
+          </div>
+        </div>
+        <img src={imageofMan} alt='man holding phone' />
+      </div>
     </div>
   )
 }

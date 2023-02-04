@@ -9,7 +9,8 @@
     border-radius: 16px;
 
 }
-.homepage-compare-with-header h2{
+
+.homepage-compare-with-header h2 {
     padding-top: 100px;
     padding-bottom: 50px;
 }
@@ -18,4 +19,40 @@
 .homepage-compare-section {
     display: flex;
     justify-content: space-around;
+}
+
+.static-homepage-data {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 50px;
+}
+
+.text-and-icons-div {
+    display: flex;
+    justify-content: baseline;
+    width: 60%;
+    margin-top: 100px;
+}
+
+.icons-div {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+}
+
+.icons-div span {
+    margin-bottom: 30px;
+}
+
+.text-div{
+    width: 500px;
+}
+.text-div p{
+    margin-top: 10px;
+}
+.text-div :nth-child(3){
+    margin-top: 30px;
+}
+.text-div button{
+    margin-top: 30px;
 }
