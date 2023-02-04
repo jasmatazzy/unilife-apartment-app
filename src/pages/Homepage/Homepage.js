@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState,useEffect} from 'react'
 import './Homepage.css'
 import Banner from '../../components/Banner/Banner'
 import SearchBox from '../../components/SearchBox/SearchBox'
@@ -9,24 +9,50 @@ import billsIcon from '../../assets/icon-bills.png'
 import imageofMan from '../../assets/image-manOnPhone.png'
 import { BsHeart } from "react-icons/bs";
 import { MdRealEstateAgent } from "react-icons/md";
+import ApiGetCities from '../../utils/ApiGetCities'
 
 
 const Homepage = () => {
 
-const handleSeeAllCities = ()=>{
-  console.log('city search handled')
-}
-const handleFindHomes = ()=>{
-  console.log('home search handled')
-}
-const handleSearchAndCompare = ()=>{
-  console.log('search&compare handled')
-}
+  const arrayTest = {
+    "response": [
+      {
+        id: 1,
+        name: "jas",
+        boolean: true
+      },
+      {
+        id: 2,
+        name: "marie",
+        boolean: false
+      },
+      {
+        id: 3,
+        name: "callie",
+        boolean: true
+      }
+    ]
+  }
 
+  const handleSeeAllCities = () => {
+    console.log('city search handled')
+    // ApiGetCities.response.map((array) => { return console.log('i  ran ' + array.name) })
+    // arrayTest.response.map((array) => { return console.log('i  ran ' + array.name) })
+
+
+  }
+  const handleFindHomes = () => {
+    console.log('home search handled')
+  }
+  const handleSearchAndCompare = () => {
+    console.log('search&compare handled')
+  }
+
+  
   return (
     <div className='homepage-container'>
       <Banner />
-      <SearchBox handleFindHomes={handleFindHomes}/>
+      <SearchBox handleFindHomes={handleFindHomes} />
       <div>City Cards go here <button onClick={handleSeeAllCities}>See all cities</button></div>
       <div className='homepage-compare-with-header'>
         <h2>Compare all inclusive student homes.</h2>
@@ -51,8 +77,8 @@ const handleSearchAndCompare = ()=>{
       <div className='static-homepage-data'>
         <div className='text-and-icons-div'>
           <div className='icons-div'>
-            <span><MdRealEstateAgent size={70}/></span>
-            <span><BsHeart size={70}/></span>
+            <span><MdRealEstateAgent size={70} /></span>
+            <span><BsHeart size={70} /></span>
           </div>
           <div className='text-div'>
             <h3>Best selection</h3>
