@@ -17,7 +17,7 @@ const Homepage = () => {
   //useEffect testing area
   const [cities, setCities] = useState([]);
   useEffect(() => {
-    fetch("https://unilife-server.herokuapp.com/cities")
+    fetch("https://unilife-server.herokuapp.com/cities?limit=9&page=2")
       .then(res => res.json())
       .then(
         (result) => {
@@ -48,7 +48,7 @@ const Homepage = () => {
       <h2>Student accommodations in our top cities</h2>
       <div className='all-cities-container'>
         {
-          cities.slice(0,9).map(
+          cities.map(
             city => <HomeCardComponent
             key= {city._id}
             cityName={city.name}

@@ -1,3 +1,22 @@
 .see-all-cities-page-container{
     min-height: 100vh;
 }
+.city-button-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.city-button-container button{
+    height: 100px;
+    width: 22%;
+    border-radius: 24px;
+    border: 1px solid #CED3D8;
+    margin-bottom: 10px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: large;
+    background-color: white;
+}
+.see-all-cities-page-container h1{
+    margin: 30px;
+}
