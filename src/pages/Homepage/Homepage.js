@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import {Link} from 'react-router-dom'
 import './Homepage.css'
 import Banner from '../../components/Banner/Banner'
 import SearchBox from '../../components/SearchBox/SearchBox'
@@ -27,9 +28,6 @@ const Homepage = () => {
   }, [])
   //useEffect testing area
 
-  const handleSeeAllCities = () => {
-    console.log('city search handled')
-  }
   const handleFindHomes = () => {
     console.log('home search handled')
   }
@@ -58,7 +56,8 @@ const Homepage = () => {
           )
         }
 
-        <button onClick={handleSeeAllCities}>See all cities</button>
+        <button className='button-link'><Link to={'/seeallcities'}>See all cities</Link></button>
+        
       </div>
       <div className='homepage-compare-with-header'>
         <h2>Compare all inclusive student homes.</h2>

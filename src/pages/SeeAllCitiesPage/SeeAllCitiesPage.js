@@ -14,14 +14,6 @@ const SeeAllCitiesPage = () => {
       ).catch(err => console.log(err))
   }, [])
   
-  function hoverColor(e) {
-    e.target.style.background = '#3A5295';
-    e.target.style.color = 'white';
-  }
-  function originalColor(e) {
-    e.target.style.background = 'white';
-    e.target.style.color = 'black';
-  }
   return (
     <div className='see-all-cities-page-container'>
       <Banner
@@ -33,7 +25,7 @@ const SeeAllCitiesPage = () => {
       <div className='city-button-container'>
         {
           cities.map(
-            (city)=><button onMouseOver={hoverColor} onMouseLeave={originalColor}>{city.name}</button>
+            (city)=><button>{city.name}</button>
           )
         }
       </div>

@@ -17,6 +17,10 @@
     font-size: large;
     background-color: white;
 }
+.city-button-container button:hover{
+    background-color: #3A5295;
+    background-color: green;
+}
 .see-all-cities-page-container h1{
     margin: 30px;
 }
