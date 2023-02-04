@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react'
 
 const ApiGetCities = () => {
-    const [error, setError] = useState(null);
+  const [error, setError] = useState(null);
   const [isLoaded, setIsLoaded] = useState(false);
   const [items, setItems] = useState([]);
 
@@ -11,8 +11,8 @@ const ApiGetCities = () => {
       .then(
         (result) => {
           setIsLoaded(true);
-          setItems(result);
-          console.log(result)
+          setItems(result.response);
+          console.log(result.response)
         },
         (error) => {
           setIsLoaded(true);
@@ -26,7 +26,7 @@ const ApiGetCities = () => {
     return <div>Loading...</div>;
   } else {
     return (
-      items.response
+      <div>{items}</div>
     );
   }
 }

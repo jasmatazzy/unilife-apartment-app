@@ -1,4 +1,4 @@
-import React, {useState,useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import './Homepage.css'
 import Banner from '../../components/Banner/Banner'
 import SearchBox from '../../components/SearchBox/SearchBox'
@@ -9,37 +9,26 @@ import billsIcon from '../../assets/icon-bills.png'
 import imageofMan from '../../assets/image-manOnPhone.png'
 import { BsHeart } from "react-icons/bs";
 import { MdRealEstateAgent } from "react-icons/md";
-import ApiGetCities from '../../utils/ApiGetCities'
+import HomeCardComponent from '../../components/HomeCardComponent/HomeCardComponent'
 
 
 const Homepage = () => {
 
-  const arrayTest = {
-    "response": [
-      {
-        id: 1,
-        name: "jas",
-        boolean: true
-      },
-      {
-        id: 2,
-        name: "marie",
-        boolean: false
-      },
-      {
-        id: 3,
-        name: "callie",
-        boolean: true
-      }
-    ]
-  }
+  //useEffect testing area
+  const [cities, setCities] = useState([]);
+  useEffect(() => {
+    fetch("https://unilife-server.herokuapp.com/cities")
+      .then(res => res.json())
+      .then(
+        (result) => {
+          setCities(result.response);
+        },
+      ).catch(err => console.log(err))
+  }, [])
+  //useEffect testing area
 
   const handleSeeAllCities = () => {
     console.log('city search handled')
-    // ApiGetCities.response.map((array) => { return console.log('i  ran ' + array.name) })
-    // arrayTest.response.map((array) => { return console.log('i  ran ' + array.name) })
-
-
   }
   const handleFindHomes = () => {
     console.log('home search handled')
@@ -48,13 +37,26 @@ const Homepage = () => {
     console.log('search&compare handled')
   }
 
-  
+
   return (
     <div className='homepage-container'>
-
       <Banner />
       <SearchBox handleFindHomes={handleFindHomes} />
-      <div>City Cards go here <button onClick={handleSeeAllCities}>See all cities</button></div>
+      <h2>Student accommodations in our top cities</h2>
+      <div className='all-cities-container'>
+        {
+          cities.slice(0,9).map(
+            city => <HomeCardComponent
+            key= {city._id}
+            cityName={city.name}
+            propCount={city.property_count}
+            backgroundImage={city.image_url}
+            />
+          )
+        }
+
+        <button onClick={handleSeeAllCities}>See all cities</button>
+      </div>
       <div className='homepage-compare-with-header'>
         <h2>Compare all inclusive student homes.</h2>
         <div className='homepage-compare-section'>

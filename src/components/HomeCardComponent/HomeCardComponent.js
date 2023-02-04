@@ -1,9 +1,15 @@
 import React from 'react'
 import "./HomeCardComponent.css"
 
-const HomeCardComponent = () => {
+const HomeCardComponent = (props) => {
+  const{cityName, propCount, backgroundImage}= props;
   return (
-    <div>Home Card Component</div>
+    <div className='home-card-component-container' style={{ 
+      backgroundImage: `url(${backgroundImage})` 
+    }}>
+      <h2>{cityName}</h2>
+      {propCount} properties
+    </div>
   )
 }
 

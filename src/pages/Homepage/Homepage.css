@@ -56,3 +56,9 @@
 .text-div button{
     margin-top: 30px;
 }
+
+.all-cities-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
