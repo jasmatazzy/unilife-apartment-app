@@ -40,7 +40,10 @@ const Homepage = () => {
 
   return (
     <div className='homepage-container'>
-      <Banner />
+      <Banner 
+      header='Find student homes with bills included'
+      description='A simple and faster way to search for student accommodation'
+      />
       <SearchBox handleFindHomes={handleFindHomes} />
       <h2>Student accommodations in our top cities</h2>
       <div className='all-cities-container'>

@@ -1,11 +1,12 @@
 import React from 'react'
 import './Banner.css'
 
-const Banner = () => {
+const Banner = (props) => {
+  const {header, description}=props
   return (
     <div className='banner'>
-      <h1>Find student homes with bills included</h1>
-      <p>A simple and faster way to search for student accommodation</p>
+      <h1>{header}</h1>
+      <p>{description}</p>
     </div>
   )
 }
