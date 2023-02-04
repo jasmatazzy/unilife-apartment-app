@@ -26,7 +26,7 @@ const ApiGetCities = () => {
     return <div>Loading...</div>;
   } else {
     return (
-      items
+      items.response
     );
   }
 }

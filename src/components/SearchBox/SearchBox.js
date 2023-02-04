@@ -6,13 +6,13 @@ const SearchBox = ({handleFindHomes}) => {
     <div>
       <form className='search-box-container'>
         <select>
-          <option selected value="placeholder">Search by city</option>
+          <option defaultValue="placeholder">Search by city</option>
           <option value="placeholder">1</option>
           <option value="placeholder">2</option>
           <option value="placeholder">3</option>
         </select>
         <select>
-          <option selected value="placeholder">Any Bedroom</option>
+          <option defaultValue="placeholder">Any Bedroom</option>
           <option value="placeholder">1</option>
           <option value="placeholder">2</option>
           <option value="mango">3</option>

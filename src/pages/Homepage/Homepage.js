@@ -51,6 +51,7 @@ const Homepage = () => {
   
   return (
     <div className='homepage-container'>
+
       <Banner />
       <SearchBox handleFindHomes={handleFindHomes} />
       <div>City Cards go here <button onClick={handleSeeAllCities}>See all cities</button></div>
