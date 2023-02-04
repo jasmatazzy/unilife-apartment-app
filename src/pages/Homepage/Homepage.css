@@ -1,6 +1,13 @@
 .homepage-container {
     min-height: 100vh;
 }
+.homepage-container button {
+    background-color: #3A5295;
+    color: white;
+    width: 150px;
+    height: 30px;
+    border-radius: 8px;
+}
 
 .homepage-compare-with-header {
     background-color: #F6FAFD;
