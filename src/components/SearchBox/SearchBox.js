@@ -1,7 +1,7 @@
 import React from 'react'
 import './SearchBox.css'
 
-const SearchBox = () => {
+const SearchBox = ({handleFindHomes}) => {
   return (
     <div>
       <form className='search-box-container'>
@@ -17,7 +17,7 @@ const SearchBox = () => {
           <option value="placeholder">2</option>
           <option value="mango">3</option>
         </select>
-        <input type="submit" value="Find Homes" />
+        <input type="submit" value="Find Homes" onClick={handleFindHomes}/>
       </form>
     </div>
   )

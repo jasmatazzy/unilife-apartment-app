@@ -12,11 +12,22 @@ import { MdRealEstateAgent } from "react-icons/md";
 
 
 const Homepage = () => {
+
+const handleSeeAllCities = ()=>{
+  console.log('city search handled')
+}
+const handleFindHomes = ()=>{
+  console.log('home search handled')
+}
+const handleSearchAndCompare = ()=>{
+  console.log('search&compare handled')
+}
+
   return (
     <div className='homepage-container'>
       <Banner />
-      <SearchBox />
-      <div>City Cards go here <button>See all cities</button></div>
+      <SearchBox handleFindHomes={handleFindHomes}/>
+      <div>City Cards go here <button onClick={handleSeeAllCities}>See all cities</button></div>
       <div className='homepage-compare-with-header'>
         <h2>Compare all inclusive student homes.</h2>
         <div className='homepage-compare-section'>
@@ -48,7 +59,7 @@ const Homepage = () => {
             <p>Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
             <h3>Your favorite</h3>
             <p>Shortlist your favourite properties and send enquiries in one click.</p>
-            <button>search and compare</button>
+            <button onClick={handleSearchAndCompare}>search and compare</button>
           </div>
         </div>
         <img src={imageofMan} alt='man holding phone' />
