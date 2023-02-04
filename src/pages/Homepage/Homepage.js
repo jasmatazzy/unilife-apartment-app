@@ -56,7 +56,7 @@ const Homepage = () => {
           )
         }
 
-        <button className='button-link'><Link to={'/seeallcities'}>See all cities</Link></button>
+        <button> <Link to={'/seeallcities'} className='link-to-button'>See all cities</Link></button>
         
       </div>
       <div className='homepage-compare-with-header'>
