@@ -31,9 +31,6 @@ const Homepage = () => {
   const handleFindHomes = () => {
     console.log('home search handled')
   }
-  const handleSearchAndCompare = () => {
-    console.log('search&compare handled')
-  }
 
 
   return (
@@ -90,7 +87,7 @@ const Homepage = () => {
             <p>Best selection of student accommodations. Never been easier to find a home that’s right for you.</p>
             <h3>Your favorite</h3>
             <p>Shortlist your favourite properties and send enquiries in one click.</p>
-            <button onClick={handleSearchAndCompare}>Search & Compare</button>
+            <button> <Link to={'/citydetailspage'} className='link-to-button'>Search & Compare👋🏾</Link></button>
           </div>
         </div>
         <img src={imageofMan} alt='man holding phone' />
