@@ -17,20 +17,22 @@ const Homepage = () => {
 
   //useEffect testing area
   const [cities, setCities] = useState([]);
+
   useEffect(() => {
-    fetch("https://unilife-server.herokuapp.com/cities?limit=9&page=2")
+    fetch("https://unilife-server.herokuapp.com/cities?limit=25")
       .then(res => res.json())
       .then(
         (result) => {
-          setCities(result.response);
+          setCities(result.response)
         },
       ).catch(err => console.log(err))
   }, [])
   //useEffect testing area
-
+  
   const handleFindHomes = () => {
     console.log('home search handled')
   }
+
 
 
   return (
@@ -39,11 +41,11 @@ const Homepage = () => {
       header='Find student homes with bills included'
       description='A simple and faster way to search for student accommodation'
       />
-      <SearchBox handleFindHomes={handleFindHomes} />
+      <SearchBox handleFindHomes={handleFindHomes} cities={cities}/>
       <h2>Student accommodations in our top cities</h2>
       <div className='all-cities-container'>
         {
-          cities.map(
+          cities.slice(9,18).map(
             city => <HomeCardComponent
             key= {city._id}
             cityName={city.name}
