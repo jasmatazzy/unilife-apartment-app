@@ -2,7 +2,7 @@ import React from 'react'
 import './SearchBox.css'
 
 const SearchBox = ({ handleFindHomes}) => {
-  const dropdownListTest= ['name 1', 'name 2', 'name 3', 'name fro']
+  const dropdownListTest= []
 
   return (
     <div>
