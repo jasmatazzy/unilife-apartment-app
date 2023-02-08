@@ -28,6 +28,10 @@
     justify-content: space-around;
 }
 
+.home-cards{
+    display:flex;
+    flex-wrap: wrap;
+}
 .static-homepage-data {
     display: flex;
     justify-content: space-around;

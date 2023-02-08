@@ -4,7 +4,7 @@ const useFetch = (url) => {
   const [state, setState] = useState({
     error: null,
     isLoaded: false,
-    data: {},
+    data: [],
   });
 
   useEffect(() => {

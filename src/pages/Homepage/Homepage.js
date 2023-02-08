@@ -33,25 +33,22 @@ const Homepage = () => {
       <SearchBox handleFindHomes={handleFindHomes} cities={cities} />
       <h2>Student accommodations in our top cities</h2>
       <div className="all-cities-container">
-        <div>
+        {/* add in the error and loading values when you figure out how to put them in the homecard return <div>
           {error && <div>{error} error</div>}
           {!isLoaded && <div>Loading...</div>}
           {cities && <pre>{JSON.stringify(cities, null, 2)}</pre>}
-        </div>
-        <div>
-          Meeeee
-          {
-            cities.map(
-              (city)=> {
-                return <HomeCardComponent 
-                id={city._id}
+        </div> */}
+        <div className="home-cards">
+          {cities.slice(4,13).map((city) => {
+            return (
+              <HomeCardComponent
+                key={city._id}
                 cityName={city.name}
                 propCount={city.property_count}
                 backgroundImage={city.image_url}
-                />
-              }
-            )
-          }
+              />
+            );
+          })}
         </div>
         <button>
           <Link to={"/seeallcities"} className="link-to-button">
