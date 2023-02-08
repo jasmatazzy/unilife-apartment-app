@@ -43,9 +43,7 @@ const Homepage = () => {
             return (
               <HomeCardComponent
                 key={city._id}
-                cityName={city.name}
-                propCount={city.property_count}
-                backgroundImage={city.image_url}
+                city={city}
               />
             );
           })}
