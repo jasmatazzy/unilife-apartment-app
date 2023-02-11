@@ -7,6 +7,9 @@
     justify-content: space-around;
     align-items: stretch;
 }
+.city-button-container:hover{
+    color: white;
+}
 .city-button-container button{
     height: 100px;
     width: 22%;
@@ -19,8 +22,17 @@
 }
 .city-button-container button:hover{
     background-color: #3A5295;
-    background-color: green;
+    color:white;
 }
 .see-all-cities-page-container h1{
     margin: 30px;
 }
+
+/* a{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: white;
+    text-decoration: none;
+} */

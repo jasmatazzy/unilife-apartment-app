@@ -18,6 +18,7 @@ function App() {
           {/* <Route path='/homedetailpage/:homeID' element={<HomeDetailPage />} /> */}
           <Route path='/homedetailpage/' element={<HomeDetailPage />} />
           <Route path='/seeallcities/' element={<SeeAllCitiesPage />} />
+          <Route path='/seeallcities/:cityID' element={<SeeAllCitiesPage />} />
           <Route path='/citydetails/:cityID' element={<CityDetailsPage />} />
         </Routes>
         <Footer />

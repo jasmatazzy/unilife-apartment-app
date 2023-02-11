@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import './SeeAllCitiesPage.css'
 import Banner from '../../components/Banner/Banner'
+import { useNavigate } from 'react-router-dom'
 
 const SeeAllCitiesPage = () => {
+  const navigate = useNavigate();
   const [cities, setCities] = useState([]);
   useEffect(() => {
     fetch("https://unilife-server.herokuapp.com/cities?limit=20")
@@ -25,7 +27,7 @@ const SeeAllCitiesPage = () => {
       <div className='city-button-container'>
         {
           cities.map(
-            (city)=><button>{city.name}</button>
+            (city)=><button onClick={()=>navigate(`/citydetails/${city?._id}`)}>{city.name}</button>
           )
         }
       </div>
