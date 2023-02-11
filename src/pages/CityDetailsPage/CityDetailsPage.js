@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Banner from "../../components/Banner/Banner";
 import SearchBox from "../../components/SearchBox/SearchBox";
+import HomeDetailCard from "../../components/HomeDetailCard/HomeDetailCard";
 import "./CityDetailsPage.css";
 import useFetch from "../../utils/useFetch";
 
@@ -11,7 +12,7 @@ const CityDetailsPage = () => {
   const { cityID } = useParams();
 
   //now that I know the cityID, I need to call the city details data
-  const [cityInfo, setCityInfo] = useState([]);
+  const [home, setHome] = useState([]);
   const [allResults, setAllResults] = useState([]);
   const [cityHomeCount, setCityHomeCount] = useState([]);
   useEffect(() => {
@@ -20,31 +21,30 @@ const CityDetailsPage = () => {
       .then((results) => {
         setAllResults(results);
         setCityHomeCount(results?.total);
-        setCityInfo(results?.response);
-        console.log(results);
-        console.log(results.response[0].address);
+        setHome(results?.response);
       });
   }, []);
 
   return (
+    <div>
+          {/* I need to use navigate here when view home element is clicked, something like this: <button onClick={()=>navigate(`/citydetails/${city?._id}`)}>{city.name}</button> */}
+          <Banner
+          key="2"
+          header="Search Accomodation"
+          description="Whatever you’re after, we can help you find the right student accommodation for you."
+        />
+        <SearchBox key="1" />
     <div className="city-details-page-container">
-      {cityInfo.map((city) => (
-        <div>
-          Available: {city.availability} <br/>
-          Deposit cost: {city.deposit}<br/>
-          Description:{city.property_description}
-          <br/>
-          <br/>
-          <br/>
-          </div>
+      {home.map((cityApartment) => (
+        <HomeDetailCard 
+        key= {cityApartment?.id}
+        homeDetails={cityApartment} 
+        />
       ))}
-      <Banner
-        header="Search Accomodation"
-        description="Whatever you’re after, we can help you find the right student accommodation for you."
-      />
-      <SearchBox />
+      
     </div>
-  );
+    </div>
+  )
 };
 
 export default CityDetailsPage;

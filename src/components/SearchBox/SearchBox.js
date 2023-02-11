@@ -2,7 +2,7 @@ import React from 'react'
 import './SearchBox.css'
 
 const SearchBox = ({ handleFindHomes}) => {
-  const fakeProps= ['name 1', 'name 2', 'name 3', 'name fro']
+  // const fakeProps= ['name 1', 'name 2', 'name 3', 'name 4']
 
   return (
     <div>
@@ -10,12 +10,12 @@ const SearchBox = ({ handleFindHomes}) => {
         <select>
           <option defaultValue="placeholder">Search by city</option>
           {
-            fakeProps.map(
-              (item) => {
-                console.log({item})
-                return <option  value={item}>{item}</option>
-              }
-            )
+            // fakeProps.map(
+            //   (item) => {
+            //     console.log({item})
+            //     return <option  value={item}>{item}</option>
+            //   }
+            // )
           }
           
         </select>

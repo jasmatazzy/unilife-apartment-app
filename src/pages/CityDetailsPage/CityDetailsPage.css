@@ -1,3 +1,13 @@
 .city-details-page-container{
     min-height: 100vh;
+    background-color: lightpink;
+    display: flex;
+}
+.city-details-page-container img{
+height: 50px;
+/* display: none; */
+}
+#bedroomIcon{
+height: 5px;
+/* display: none; */
 }
