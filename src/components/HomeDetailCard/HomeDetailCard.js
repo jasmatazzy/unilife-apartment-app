@@ -7,9 +7,11 @@ const HomeDetailCard = ({homeDetails}) => {
 const {images, rent, bedroom_count, bathroom_count, property_type, furnished}= homeDetails;
 console.log(rent)
 console.log(`rent is ${rent}, and bedroom count is ${bedroom_count}`)
+console.log('the images are reading as' + JSON.stringify(images, null, 2))
+console.log('the first image is reading as' + JSON.stringify(images[0], null, 2))
   return (
     <div className="homes-card">
-      <img src={images} alt="pic will go here" />
+      <img src={images.slice(0,1)} alt="pic will go here" />
       <div>
         blue banner will go here
         <div>
