@@ -6,6 +6,7 @@ import Homepage from './pages/Homepage/Homepage';
 import HomeDetailCard from './components/HomeDetailCard/HomeDetailCard';
 import SeeAllCitiesPage from './pages/SeeAllCitiesPage/SeeAllCitiesPage';
 import CityDetailsPage from './pages/CityDetailsPage/CityDetailsPage';
+import HomeDetailPage from './pages/HomeDetailPage/HomeDetailPage';
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
           <Route path='/seeallcities/' element={<SeeAllCitiesPage />} />
           <Route path='/seeallcities/:cityID' element={<SeeAllCitiesPage />} />
           <Route path='/citydetails/:cityID' element={<CityDetailsPage />} />
+          <Route path='/homedetailpage/:homeID' element={<HomeDetailPage/>} />
+          <Route path='/homedetailpage/' element={<HomeDetailPage/>} />
         </Routes>
         <Footer />
       </BrowserRouter>

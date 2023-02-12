@@ -4,7 +4,8 @@ const useFetch = (url) => {
   const [state, setState] = useState({
     error: null,
     isLoaded: false,
-    data: [],
+    parsedData: [],
+    data: []
   });
 
   useEffect(() => {
@@ -14,7 +15,8 @@ const useFetch = (url) => {
         (result) => {
           setState({
             isLoaded: true,
-            data: result.response,
+            parsedData: result.response,
+            data: result
           });
           console.log(result.response);
         },
@@ -25,7 +27,7 @@ const useFetch = (url) => {
           });
         }
       );
-  }, []);
+  }, [url]);
 
   return state;
 };

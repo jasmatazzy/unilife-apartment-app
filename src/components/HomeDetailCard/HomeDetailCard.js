@@ -6,8 +6,10 @@ import homeIcon from "../../assets/icon-single-home.png";
 import "./HomeDetailCard.css";
 import { useNavigate } from "react-router-dom";
 
+
 const HomeDetailCard = ({ homeDetails }) => {
   const navigate = useNavigate();
+ 
   const {
     images,
     rent,
@@ -53,7 +55,7 @@ const HomeDetailCard = ({ homeDetails }) => {
       </div>
       <div
         className="view-home-button"
-        onClick={() => navigate(`/properties/${_id}`)}
+        onClick={() => navigate(`/homedetailpage/${_id}`)}
       >
         <img src={homeIcon} alt="view home icon" />
         <p>View Home</p>

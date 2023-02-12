@@ -17,7 +17,7 @@ const Homepage = () => {
   const {
     isLoaded,
     error,
-    data: cities,
+    parsedData: cities,
   } = useFetch("https://unilife-server.herokuapp.com/cities?limit=35");
 
   const handleFindHomes = () => {
