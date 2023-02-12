@@ -2,7 +2,7 @@ import React from 'react'
 import { BsHeart } from "react-icons/bs";
 import { MdOutlineMail } from "react-icons/md";
 import { Link } from 'react-router-dom';
-import home from '../../assets/icon-home.png'
+import home from '../../assets/icon-multi-home.png'
 import './Header.css'
 
 const Header = () => {

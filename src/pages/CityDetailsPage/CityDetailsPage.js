@@ -38,7 +38,7 @@ const CityDetailsPage = () => {
       {home.map((cityApartment) => (
         <HomeDetailCard 
         key= {cityApartment?.id}
-        homeDetails={cityApartment} 
+        homeDetails={cityApartment}
         />
       ))}
       

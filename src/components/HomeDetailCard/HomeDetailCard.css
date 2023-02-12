@@ -1,6 +1,17 @@
-.home-detail-card-container{
-    min-height: 100vh;
+.homes-card{
+    min-height: 40vh;
+    margin: 10px;
+    max-width: 28%;
+    border: gray solid 1px;
+    border-radius: 16px;
+    overflow: hidden;
 }
+
+#image-main{
+    max-width: 100%;
+    object-fit: contain;
+}
+
 .pics-and-basics-container{
     display: flex;
     justify-content: center;
@@ -9,4 +20,53 @@
 .description-and-bedroom-pricing-container{
     display: flex;
     justify-content: center;
+}
+
+.blue-section{
+    margin-top: -4px;
+    padding: 15px 8px 5px 8px;
+    display: flex;
+    justify-content: space-between;
+    background-color:#3A5295;
+    color: white;
+}
+
+.all-rooms-info-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+}
+
+.bedroom-info-box{
+    margin-right: 20px;
+}
+
+.more-details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: gray 0.5px solid;
+}
+
+.more-details p{
+    margin: 15px 10px 0 10px;
+}
+
+.more-details p:last-child{
+font-size: 12px;
+padding: 10px 0 15px 12px;
+margin: 0 10px;
+}
+
+.view-home-button{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.view-home-button img{
+    height: 20px;
+    margin-right: 15px;  
 }
