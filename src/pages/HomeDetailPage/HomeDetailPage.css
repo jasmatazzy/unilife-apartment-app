@@ -1,6 +1,7 @@
 .home-detail-page-container{
     min-height: 100vh;
     padding: 0 20px;
+    text-align: justify;
 }
 
 .home-detail-pictures{
@@ -84,7 +85,8 @@
 }
 
 .key-features{
-    align-self: self-start;
+    align-items: start;
+    margin-top: -125px;
 }
 
 .description-and-bedroom-prices-container{
