@@ -1,6 +1,6 @@
 .banner{
     background-image: url('../../assets/image-banner.png');
-    background-size:stretch;
+    background-size:cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
